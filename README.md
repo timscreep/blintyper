@@ -1,4 +1,5 @@
 ну, крч, эта штука работает только для X11 или для Wayland
+она создана, чтобы отправлять заготовленные фразы и милоту
 прежде всего надо установить пайтон, xdotool и/или wtype, а затем библиотеки пайтон
 после этого прописать штуку в автозапуск
 
@@ -16,7 +17,8 @@ pip install Pillow pystray
 ```
 ## для Arch
 ```
-sudo pacman -S git python xdotool wtype 
+sudo pacman -S git python xdotool wtype
+pip install Pillow pystray
 ```
 
 
@@ -30,3 +32,9 @@ git clone https://github.com/timscreep/blintyper.git
 ```
 cd blintyper && python3 quotim_wl.py
 ```
+![image](https://github.com/timscreep/blintyper/assets/81462085/042f83cd-29ed-4862-b1f6-7ed7a5b2fa0d)
+
+
+
+
+вы в праве изменять абсолютно все файлы как хотите
