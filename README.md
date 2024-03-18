@@ -14,7 +14,7 @@ pip install Pillow pystray
 sudo dnf install git python3 xdotool wtype
 pip install Pillow pystray
 ```
-## для арча
+## для Arch
 ```
 sudo pacman -S git python xdotool wtype 
 ```
