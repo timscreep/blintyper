@@ -28,7 +28,7 @@ pip install Pillow pystray
 ```
 git clone https://github.com/timscreep/blintyper.git
 ```
-засуньте штуку в автозапуск, команда должна выглядеть как-то так:
+засуньте следующую команду в автозапуск:
 ```
 cd blintyper && python3 quotim_wl.py
 ```
