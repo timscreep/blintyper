@@ -18,7 +18,7 @@ pip install Pillow pystray
 ## для Arch
 ```
 sudo pacman -S git python xdotool wtype
-pip install Pillow pystray
+yay python-pillow python-pystray
 ```
 
 
