@@ -22,7 +22,7 @@ def time_intervals(current_time, line):
 
 def type_text(text):
     if (os.environ.get("WAYLAND_DISPLAY") and which("wtype")):
-        subprocess.run(f"wtype '{text}' ", shell = True)
+        subprocess.run(f"wtype {text} -P Return -p Return", shell = True)
     else:
         subprocess.run(f"xdotool type '{text}' ", shell = True)
 
