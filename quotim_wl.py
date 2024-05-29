@@ -1,15 +1,23 @@
+import os
 import subprocess
+
 from datetime import datetime, time
 from random import choice
+
 from PIL import Image
 from pystray import Icon, Menu
 from pystray import MenuItem as item
 from shutil import which
-import os
+import pyperclip
+from pyautogui import hotkey
+
+
 # Set the paths to the required files
 milashka_file_path = "milashka.txt"
 texts_file_path = "texts.txt"
 tray_image_path = "blin.png"
+
+
 
 def time_intervals(current_time, line):
     if (current_time >= time(20, 0)) or (current_time < time(4, 0)):
@@ -24,8 +32,9 @@ def type_text(text):
     if (os.environ.get("WAYLAND_DISPLAY") and which("wtype")):
         subprocess.run(f"wtype {text} -P Return -p Return", shell = True)
     else:
-        subprocess.run(f"xdotool type '{text}' ", shell = True)
-
+        pyperclip.copy(text)
+        hotkey('ctrl', 'v')
+        return True
 def make_type_text_action(text):
     def action(icon):
         return type_text(text)
