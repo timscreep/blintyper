@@ -21,6 +21,11 @@ sudo pacman -S git python xdotool wtype
 yay python-pillow python-pystray
 ```
 
+## для Windows
+батник от имени администратора установит нужную версию пайтона и зависимости
+я бы полностью допилил бы еще и распаковку архива, но мне легче показать вам, как должны выглядеть папки
+
+![image](https://github.com/timscreep/blintyper/assets/81462085/5e078370-d63e-4707-9972-40eee1faad9a)
 
 
 # установка
