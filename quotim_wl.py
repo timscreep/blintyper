@@ -7,8 +7,7 @@ from pystray import Icon, Menu
 from pystray import MenuItem as item
 from shutil import which
 import keyboard
-import NewYear
-import Love
+from Plugins import Love, Dr, NewYear
 # Set the paths to the required files
 texts_file_path = "texts.txt"
 tray_image_path = "blin.png"
@@ -29,6 +28,8 @@ def love():
     type_text(Love.love())
 def НовыйГод():
     type_text(NewYear.ОсталосьДоНГ())
+def ДеньРождения():
+    type_text(Dr.ОсталосьДоДр())
 # Define the texts and actions for the context menu
 with open(texts_file_path, 'r') as texts_file:
     texts = [text[:-1] for text in texts_file.readlines()]
@@ -37,6 +38,8 @@ with open(texts_file_path, 'r') as texts_file:
 menu_items = [item(text, make_type_text_action(text)) for text in texts]
 menu_items.append(item("love", love))
 menu_items.append(item("До НГ", НовыйГод))
+menu_items.append(item("До ДР Стаси", ДеньРождения))
+
 menu = Menu(*menu_items)
 
 # Create the system tray icon
